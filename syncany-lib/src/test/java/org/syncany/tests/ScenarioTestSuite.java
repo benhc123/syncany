@@ -39,6 +39,7 @@ import org.syncany.tests.scenarios.FolderPermissionChangeScenarioTest;
 import org.syncany.tests.scenarios.IdenticalFileMoveScenarioTest;
 import org.syncany.tests.scenarios.IgnoredFileScenarioTest;
 import org.syncany.tests.scenarios.Issue143ScenarioTest;
+import org.syncany.tests.scenarios.Issue58ScenarioTest;
 import org.syncany.tests.scenarios.ManyRenamesScenarioTest;
 import org.syncany.tests.scenarios.ManySyncUpsAndDatabaseFileCleanupScenarioTest;
 import org.syncany.tests.scenarios.ManySyncUpsAndOtherClientSyncDownScenarioTest;
@@ -78,6 +79,7 @@ import org.syncany.tests.scenarios.DirtyDatabaseVersionsScenarioTest;
 	IdenticalFileMoveScenarioTest.class,
 	IgnoredFileScenarioTest.class,
 	Issue143ScenarioTest.class,
+	Issue58ScenarioTest.class,
 	ManyRenamesScenarioTest.class,
 	ManySyncUpsAndDatabaseFileCleanupScenarioTest.class,
 	ManySyncUpsLargeFileScenarioTest.class,

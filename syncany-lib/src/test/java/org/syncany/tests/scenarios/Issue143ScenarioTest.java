@@ -36,6 +36,7 @@ public class Issue143ScenarioTest {
 		java.sql.Connection databaseConnectionA = clientA.getConfig().createDatabaseConnection();
 		
 		TestClient clientB = new TestClient("B", testConnection);
+		java.sql.Connection databaseConnectionB = clientB.getConfig().createDatabaseConnection();
 
 		// Scenario, see
 		// https://github.com/syncany/syncany/issues/143#issuecomment-50964685
@@ -69,6 +70,8 @@ public class Issue143ScenarioTest {
 				
 		clientB.down(); // <<<< This creates the exception in #143
 		                // integrity constraint violation: foreign key no parent; SYS_FK_10173 table: FILEVERSION
+
+		assertEquals("7", TestSqlUtil.runSqlSelect("select count(*) from databaseversion", databaseConnectionB));
 		
 		// Tear down
 		clientA.deleteTestData();

@@ -229,6 +229,10 @@ public class DatabaseXmlParseHandler extends DefaultHandler {
 		}
 	}
 
+	/**
+	 * Filters already purged file versions, i.e. file versions purged in a later version
+	 * are not loaded. This is a solution to issue #58. 
+	 */
 	private boolean filterFileVersion(PartialFileHistory fileHistory, Long fileVersionNum) {
 		if (ignoredMostRecentFileVersions != null) {
 			FileVersion mostRecentPurgeVersion = ignoredMostRecentFileVersions.get(fileHistory.getFileHistoryId());
